@@ -1,4 +1,4 @@
-call plug#begin('$VIM/plug')
+call plug#begin('$HOME/vim/plug')
 
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
@@ -36,9 +36,8 @@ set lazyredraw
 let mapleader = ";"
 
 " be able to open this file quickly and easily
-cnoremap <Leader>vimrc vsplit! $XDG_CONFIG_HOME/nvim/init.vim <CR>
-cnoremap <Leader>notes $XDG_DATA_HOME/notes/otl/
-cnoremap <Leader>kg $XDG_DATA_HOME/kgsn18/code
+cnoremap <Leader>vimrc vsplit! $HOME/vim/vimconf/init.vim <CR>
+cnoremap <Leader>notes $HOME/vim/notes/
 
 " convenience
 nnoremap j gj
@@ -84,7 +83,6 @@ cnoremap  <Leader>qdesc %s/.*<starttime>\(.*\)<\/starttime>.*<description>\(.*\)
 cnoremap  <Leader>qapos %s/&apos;/"/g
 
 " vimgrep stuff
-nnoremap <silent> <F3> :copen<CR>
 nnoremap <silent> <S-F3> :cclose<CR>
 nnoremap <silent> <F4> :cnext<CR>
 nnoremap <silent> <S-F4> :cprev<CR>
